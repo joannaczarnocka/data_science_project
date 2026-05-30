@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+
+# Modele
+models/*
+!models/.gitkeep
+*.keras
+
+# Raporty (wygenerowane)
+reports/*
+!reports/.gitkeep
+
+# IDE
+.idea/
+.vscode/

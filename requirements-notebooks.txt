@@ -1,0 +1,5 @@
+# Opcjonalnie — Jupyter i testy (wymaga dzialajacego pip / SSL)
+-r requirements.txt
+jupyter>=1.0
+ipykernel>=6.29
+pytest>=8.0
