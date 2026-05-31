@@ -806,7 +806,7 @@ def slide_results_per_class(prs, tr_df, te_df):
         "→ koszt: utrata talentow,\n   rekrutacja (6-9x miesieczna pensja)",
         "FP (False Positive) = falszywy alarm\n→ koszt: zbedna retencja (~500 zl)",
         "Optymalny model: wysoki Recall\nbez za duzej liczby FP",
-        "Voting LR+SVM:\n  TN=450, FP=43, FN=33, TP=62\n  Recall=0.642 — wykrywa 62/95",
+        "Voting LR+SVM:\n  TN=445, FP=48, FN=34, TP=61\n  Recall=0.642 — wykrywa 61/95",
     ]
     y_b = 1.8
     for b in biz:
@@ -818,7 +818,7 @@ def slide_best_model(prs, te_df):
     sld = _add_slide(prs)
     _bg(sld, C_WHITE)
     _title_bar(sld, "07. Najlepszy model — Voting LR+SVM",
-               "F1=0.598 · AUC=0.821 · Overfit=0.061 · TN=450, FP=43, FN=33, TP=62")
+               "F1=0.598 · AUC=0.821 · Overfit=0.061 · TN=445, FP=48, FN=34, TP=61")
 
     # metryki
     metrics = [
@@ -839,8 +839,8 @@ def slide_best_model(prs, te_df):
 
     # macierz pomylek
     fig, axes = plt.subplots(1, 2, figsize=(7, 3))
-    cm = np.array([[450, 43], [33, 62]])
-    labels = [["TN=450", "FP=43"], ["FN=33", "TP=62"]]
+    cm = np.array([[445, 48], [34, 61]])
+    labels = [["TN=445", "FP=48"], ["FN=34", "TP=61"]]
     colors_cm = [["#E8F0F8","#FFDDD0"],["#FFE8CC","#D0F0D8"]]
     for i in range(2):
         for j in range(2):
